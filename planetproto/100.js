@@ -5,8 +5,10 @@
 
 function Robot() {
 	this.parts = [];
-	this.capabilities = [];
+	//this.capabilities = [];
 }
+
+Robot.prototype.capabilities = [];
 
 var robby = new Robot();
 var cranky = new Robot();
@@ -27,8 +29,7 @@ claim(cranky.capabilities, []);
 
 robby.parts.push('core');
 robby.capabilities.push('fly');
-//cranky.__proto__ = robby;
-Robot.prototype.capabilities = 'fly';
+//cranky.capabilities.push('fly');
 
 // -> Claim the result of robby.parts
 claim(robby.parts, ['core']);
